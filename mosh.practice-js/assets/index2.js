@@ -93,3 +93,12 @@ function primNumber(limit) {
   }
 }
 primNumber(20);
+
+function sumNumber() {
+  let result = 0;
+  for (let value of arguments) {
+    result += value;
+  }
+  return result;
+}
+console.log(sumNumber(10, 5, 8));
