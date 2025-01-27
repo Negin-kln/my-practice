@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image{
+            border: 1px solid red;
+            width: 200px ;
+            height: 200px;
+
+        }
+    </style>
+</head>
+<body>
+    <img src="assets/image/کورنومتر.png" class="image" onmouseenter="bigImage()" onmouseleave="normalImage()"></img>
+    <script>
+        function bigImage(){
+            document.getElementsByClassName("image")[0].style.width="400px"
+            document.getElementsByClassName("image")[0].style.height="400px"
+        }
+        function normalImage(){
+            document.getElementsByClassName("image")[0].style.width="200px"
+            document.getElementsByClassName("image")[0].style.height="200px"
+        }
+    </script>
+</body>
+</html>
