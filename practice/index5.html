@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: "maral",
+        age: 32,
+        hobbies: ["reading", "lestin to musice"],
+      };
+      delete person.age;
+      console.log(person);
+      // program to check if a string starts with 'S' and ends with 'G'
+
+      function checkString(str) {
+        // check if the string starts with S and ends with G
+        if (/^S/i.test(str) && /G$/i.test(str)) {
+          console.log("The string starts with S and ends with G");
+        } else if (/^S/i.test(str)) {
+          console.log("The string starts with S but does not ends with G");
+        } else if (/G$/i.test(str)) {
+          console.log("The string starts does not with S but ends with G");
+        } else {
+          console.log(
+            "The string does not start with S and does not end with G"
+          );
+        }
+      }
+
+      // for loop to show different scenario
+      //   for (let i = 0; i < 3; i++) {
+      //     // take input
+      //     const string = prompt("Enter a string: ");
+
+      //     checkString(string);
+      //   }
+      function checkString2(str) {
+        if (str.startsWhit("S") && str.endsWhit("G"))
+          console.log("The string starts with S and ends with G");
+        else if (str.startsWhit("S"))
+          console.log("The string starts with S but does not end with G");
+        else if (str.endsWhit("G"))
+          console.log("The string starts does not with S but end with G");
+        else
+          console.log(
+            "The string does not start with S and does not end with G"
+          );
+      }
+      let hasKey = person.hasOwnProperty("name");
+      if (hasKey) {
+        console.log("The key exists.");
+      } else {
+        console.log("The key does not exist.");
+      }
+      const gendery = {
+        gender: "male",
+      };
+      let person2 = { ...person, ...gendery };
+      console.log(person2);
+      let count = 0;
+      for (let key in person2) {
+        ++count;
+      }
+      console.log(count);
+      person.height = 5.4;
+      console.log(person);
+      const text = "Mr red has a red house and a red car";
+      const result = text.split("red").join("blue");
+      console.log(result);
+    </script>
+  </body>
+</html>
