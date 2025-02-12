@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const address = {
+        street: "a",
+        city: "b",
+        zipCode: "c",
+      };
+      function showAddress() {
+        for (let i in address) {
+          console.log(i, address[i]);
+        }
+      }
+      showAddress();
+      //factory function
+      function creatAddress(street, city, zipCode) {
+        return {
+          street,
+          city,
+          zipCode,
+        };
+      }
+      const address1 = creatAddress("a", "b", "c");
+      console.log(address1);
+      // constructor function
+      function Address(street, city, zipCode) {
+        this.street = street;
+        this.city = city;
+        this.zipCode = zipCode;
+      }
+      let address2 = new Address("a", "b", "c");
+      let address3 = new Address("a", "b", "c");
+      let address4 = address2;
+      console.log(address2);
+      function areEqal(address1, address2) {
+        return (
+          address1.city === address2.city &&
+          address1.street === address2.street &&
+          address1.zipCode === address2.zipCode
+        );
+      }
+      function areSame(address1, address2) {
+        return address1 === address2;
+      }
+      console.log(areEqal(address2, address3));
+      console.log(areSame(address2, address3));
+      console.log(areSame(address2, address4));
+      const post = {
+        title: "a",
+        body: "b",
+        author: "c",
+        views: 12,
+        comment: [
+          { author: "a", body: "b" },
+          { author: "c", body: "d" },
+        ],
+        isLive: true,
+      };
+      console.log(post);
+      function AddPost(title, body, author) {
+        this.title = title;
+        this.body = body;
+        this.author = author;
+        this.comment = [];
+        this.views = 0;
+        this.isLive = true;
+      }
+      const post2 = new AddPost("a", "b", "c");
+      console.log(post2);
+      let perPerson = [
+        { label: "$", title: "inexpensive", minPer: "0", maxPer: "10" },
+        { label: "$$", title: "middle", minPer: "11", maxPer: "20" },
+        { label: "$", title: "expensive", minPer: "21", maxPer: "50" },
+      ];
+      let rest = [{ midPer: 5 }];
+      const numbers = [3, 4, 1];
+      //   end
+      numbers.push(5, 6);
+      console.log(numbers);
+      // begin
+      numbers.unshift(1);
+      console.log(numbers);
+      //middle
+      numbers.splice(1, 0, 2);
+      console.log(numbers);
+      //index
+      console.log(numbers.indexOf(1));
+      console.log(numbers.lastIndexOf(1));
+      console.log(numbers.indexOf(1) !== -1);
+      console.log(numbers.includes(1));
+      console.log(numbers.indexOf(1, 2));
+      const courses = [
+        { id: 1, name: "a" },
+        { id: 2, name: "b" },
+      ];
+      let course = courses.find(function (course) {
+        return course.name === "a";
+      });
+      let course1 = courses.findIndex(function (course) {
+        return course.name === "a";
+      });
+      console.log(course);
+      console.log(course1);
+      let course2 = courses.find((course) => course.name === "b");
+      console.log(course2);
+      const numbers1 = [1, 2, 3, 4, 5];
+      //end
+      console.log(numbers1.pop());
+      //begin
+      console.log(numbers1.shift());
+      //middle
+      console.log(numbers1.splice(0,1));
+    </script>
+  </body>
+</html>
