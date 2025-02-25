@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نمایش اطلاعات با Axios</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        direction: rtl;
+        padding: 20px;
+      }
+      .post {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+      .post h3 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>نمایش پست‌ها</h1>
+    <div id="posts-container">
+      <!-- اطلاعات اینجا نمایش داده می‌شود -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      // آدرس API
+      const apiUrl = "http://127.0.0.1:3000/users";
+
+      // دریافت داده‌ها از API
+      axios
+        .get(apiUrl)
+        .then((response) => {
+          const users = response.data; // داده‌های دریافتی
+          const postsContainer = document.getElementById("posts-container");
+
+          // نمایش هر پست در صفحه
+          users.forEach((user) => {
+            const postElement = document.createElement("div");
+            postElement.classList.add("post");
+            postElement.innerHTML = `
+                <h3>${user.id}</h3>
+                <p>${user.name}</p>
+                <small>شناسه کاربر: ${user.id}</small>
+            `;
+
+            postsContainer.appendChild(postElement);
+          });
+        })
+        .catch((error) => {
+          console.error("خطا در دریافت داده‌ها:", error);
+          const postsContainer = document.getElementById("posts-container");
+          postsContainer.innerHTML =
+            '<p style="color: red;">خطا در دریافت داده‌ها. لطفاً دوباره تلاش کنید.</p>';
+        });
+    </script>
+  </body>
+</html>
