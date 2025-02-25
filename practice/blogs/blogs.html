@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Blogs</h1>
+      <table>
+        <tr>
+          <th>id</th>
+          <th>title</th>
+          <th colspan="3">tools</th>
+        </tr>
+      </table>
+    </main>
+    <script src="../../assets/js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $.get("http://127.0.0.1:3000/blogs", function (data, status) {
+          if (status == "success") {
+            for (let item of data) {
+              $("table").append(
+                `<tr><td>${item.id}</td><td>${item.title}</td><td id="delete" data-id="${item.id}">delete</td><td><a href="http://127.0.0.1:5500/src/blogs/blog.html?id=${item.id}">view</a></td><td><a href="http://127.0.0.1:5500/src/blogs/update.html?id=${item.id}">edit</a></td></tr>`
+              );
+            }
+          }
+        });
+        $("body").on("click", "#delete", function () {
+          let id = $(this).attr("data-id");
+          console.log(id);
+          var settings = {
+            url: `http://127.0.0.1:3000/blogs/${id}`,
+            method: "DELETE",
+            timeout: 0,
+          };
+
+          $.ajax(settings).done(function (response) {
+            console.log(response);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
