@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Example</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* styles.css */
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      /* استایل Modal */
+      .modal {
+        display: none; /* مخفی کردن Modal به صورت پیش‌فرض */
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5); /* پس‌زمینه تیره */
+      }
+
+      /* محتوای Modal */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      /* دکمه بستن Modal */
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- دکمه برای باز کردن Modal -->
+    <button id="openModalBtn">باز کردن Modal</button>
+
+    <!-- ساختار Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModalBtn" class="close">&times;</span>
+        <p>این یک Modal ساده است!</p>
+      </div>
+    </div>
+
+    <script>
+      // script.js
+
+      // گرفتن عناصر مورد نیاز
+      const modal = document.getElementById("myModal");
+      const openModalBtn = document.getElementById("openModalBtn");
+      const closeModalBtn = document.getElementById("closeModalBtn");
+
+      // باز کردن Modal هنگام کلیک روی دکمه
+      openModalBtn.addEventListener("click", () => {
+        modal.style.display = "block";
+      });
+
+      // بستن Modal هنگام کلیک روی دکمه بستن
+      closeModalBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      // بستن Modal هنگام کلیک خارج از محتوای Modal
+      window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
