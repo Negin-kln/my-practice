@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .faqQ {
+        border: 1px solid red;
+        background-color: red;
+      }
+      .faqA {
+        border: 1px solid red;
+        display: none;
+      }
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="faqbox">
+      <div class="faqQ">
+        <a href="#" data-target="faq1" onclick="clickHandler(this,event)"
+          >item1</a
+        >
+      </div>
+      <div class="faqA" id="faq1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt sunt
+        dolorem labore provident culpa quibusdam accusamus aut recusandae harum
+        quis eius dolores atque repellat officiis, nemo, corporis fugiat cumque
+        non?
+      </div>
+    </div>
+    <div class="faqbox">
+      <div class="faqQ">
+        <a href="#" data-target="faq2" onclick="clickHandler(this,event)"
+          >item1</a
+        >
+      </div>
+      <div class="faqA" id="faq2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt sunt
+        dolorem labore provident culpa quibusdam accusamus aut recusandae harum
+        quis eius dolores atque repellat officiis, nemo, corporis fugiat cumque
+        non?
+      </div>
+    </div>
+    <script>
+      let faqId = "";
+      function clickHandler(elm, e) {
+        e.preventDefault();
+        let faqBox = document.querySelectorAll(".faqA");
+        for (let item of faqBox) {
+          item.classList.remove("show");
+          console.log(item);
+        }
+        console.log(elm);
+        let faqLines = elm.getAttribute("data-target");
+        console.log(faqLines);
+        if (faqId != faqLines) {
+          document.getElementById(faqLines).classList.add("show");
+          faqId = faqLines;
+        } else {
+          document.getElementById(faqLines).classList.remove("show");
+          faqId = "";
+        }
+      }
+    </script>
+  </body>
+</html>
