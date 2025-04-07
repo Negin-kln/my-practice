@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      button.sidenav-button {
+        border: 1px solid red;
+      }
+      .sidenav {
+        width: 250px;
+        height: 100%;
+        background-color: red;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        transition: 0.5s;
+      }
+      #modal {
+        width: 300px;
+        height: 200px;
+        background-color: blue;
+        margin: auto;
+        margin-top: 150px;
+        display: none;
+      }
+      .count {
+        display: flex;
+      }
+      .count div {
+        border: 1px solid red;
+        width: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="sidenav-button" onclick="clickHandler()">sidenav</button>
+    <div class="sidenav"><button onclick="clickButton()">x</button></div>
+    <button onclick="clickModal()">modal</button>
+    <div id="modal"><button onclick="clickbtn()">x</button></div>
+    <div class="count">
+      <button onclick="countDown()">-</button>
+      <div id="count-num">0</div>
+      <button onclick="countUp()">+</button>
+    </div>
+    <script>
+      //   let age = Number(prompt("please enter your age:"));
+      //   if (age < 0 || age > 100) console.log("please enter true number.");
+      //   if (age > 0 && age <= 18) console.log("your are young");
+      //   if (age > 18 && age <= 100) console.log("your can");
+      //   -------------------------------------------------1
+      //   let hours = Number(prompt("please enter hours:"));
+      //   if (hours > 0 && hours <= 6) console.log("good midnight.");
+      //   if (hours > 6 && hours <= 12) console.log("good morning.");
+      //   if (hours > 12 && hours <= 18) console.log("good afternoon.");
+      //   if (hours > 18 && hours <= 24) console.log("good night.");
+      //   -------------------------------------------------2
+      //   let number = Number(prompt("please enter a number:"));
+      //   let num = number % 2;
+      //   if (num == 0) console.log("number is even.");
+      //   else console.log("number is odd.");
+      //   -------------------------------------------------3
+      //   let score = Number(prompt("please enter score:"));
+      //   if (score >= 0 && score < 10) console.log("you rejected.");
+      //   if (score >= 10) console.log("you sucsses.");
+      //   -------------------------------------------------4
+      //   let tmp = Number(prompt("please enter tmp:"));
+      //   if (tmp < 0 || tmp > 30) console.log("this is a bad tmp");
+      //   else console.log("this is correct tmp");
+      //   -------------------------------------------------5
+      //   let favColor = prompt("please enter your favarit color:");
+      //   switch (favColor) {
+      //     case "blue":
+      //       console.log("your favcolor is blue");
+      //       break;
+      //     case "red":
+      //       console.log("your favcolor is red");
+      //       break;
+      //     default:
+      //       console.log("your favcolor is not found");
+      //   }
+      //   -------------------------------------------------6
+      //   let role = prompt("please enter your role:");
+      //   switch (role) {
+      //     case "admin":
+      //       console.log("you have all permission.");
+      //       break;
+      //     case "user":
+      //       console.log("you can see all web page.");
+      //       break;
+      //     default:
+      //       console.log("please submit.");
+      //   }
+      //   -------------------------------------------------7
+      //   let num1 = Number(prompt("please enter num1:"));
+      //   let num2 = Number(prompt("please enter num2:"));
+      //   let num3 = num1 + num2;
+      //   console.log(`${num1} + ${num2} = ${num3}`);
+      //   -------------------------------------------------8
+      function sum() {
+        let sum = 0;
+        for (let num of arguments) {
+          sum += num;
+        }
+        console.log(sum);
+      }
+      sum(10, 15, 17);
+      //   -------------------------------------------------9
+      function min() {
+        let resulte = arguments[0];
+        for (let num of arguments) {
+          if (num < resulte) resulte = num;
+        }
+        console.log(resulte);
+      }
+      min(5, 10, 1);
+      //   -------------------------------------------------10
+      let sidenav = document.getElementsByClassName("sidenav")[0];
+      function clickHandler() {
+        sidenav.style.right = "0px";
+      }
+      function clickButton() {
+        sidenav.style.right = "-250px";
+      }
+      //   -------------------------------------------------11
+      function clickModal() {
+        let modal = document.getElementById("modal");
+        modal.style.display = "block";
+      }
+      function clickbtn() {
+        document.getElementById("#modal button");
+        modal.style.display = "none";
+      }
+      //   -------------------------------------------------12
+      function countUp() {
+        let count = parseInt(document.getElementById("count-num").innerHTML);
+        count++;
+        document.getElementById("count-num").innerHTML = count;
+      }
+      function countDown() {
+        let count = parseInt(document.getElementById("count-num").innerHTML);
+        count--;
+        document.getElementById("count-num").innerHTML = count;
+      }
+      //   -------------------------------------------------13
+      //   -------------------------------------------------14
+      //   -------------------------------------------------15
+      //   -------------------------------------------------16
+      //   -------------------------------------------------17
+      //   -------------------------------------------------18
+      //   -------------------------------------------------19
+      //   -------------------------------------------------20
+      //   -------------------------------------------------21
+      //   -------------------------------------------------22
+      //   -------------------------------------------------23
+      //   -------------------------------------------------24
+      //   -------------------------------------------------25
+    </script>
+  </body>
+</html>
