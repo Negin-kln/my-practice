@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        border: 1px solid red;
+        width: 400px;
+        margin: auto;
+        padding: 10px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>ورود به حساب کاربری</h2>
+      <form action="">
+        <div>
+          <label for="name">name</label><br /><input type="text" id="name" />
+          <div class="nametaxt"></div>
+        </div>
+        <div>
+          <label for="lastname">lastname</label><br /><input
+            type="text"
+            id="lastname"
+          />
+          <div class="lastnametext"></div>
+        </div>
+        <div>
+          <label for="age">age</label><br /><input type="text" id="age" />
+          <div class="agetext"></div>
+        </div>
+        <button type="submit" onclick="clickHandler()">submit</button>
+      </form>
+    </div>
+    <script>
+      function clickHandler() {
+        let nameValue = document.getElementById("name").value;
+        let lastnameValue = document.getElementById("lastname").value;
+        let ageValue = document.getElementById("age").value;
+        if (nameValue.lenght < 3 && nameValue.lenght > 10)
+          document.getElementsByClassName("nametaxt")[0].innerHTML =
+            "لطفا بین 3 تا 10 تا حرف باشد";
+        else if (nameValue == "")
+          document.getElementsByClassName("nametaxt")[0].innerHTML = "خالی است";
+        else document.getElementsByClassName("nametaxt")[0].innerHTML = "";
+        if (lastnameValue.lenght < 3 && lastnameValue.lenght > 10)
+          document.getElementsByClassName("nametaxt")[0].innerHTML =
+            "لطفا بین 3 تا 10 تا حرف باشد";
+        else if (lastnameValue == "")
+          document.getElementsByClassName("nametaxt")[0].innerHTML = "خالی است";
+        else document.getElementsByClassName("nametaxt")[0].innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

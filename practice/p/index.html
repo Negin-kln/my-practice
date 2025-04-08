@@ -49,6 +49,12 @@
       <div id="count-num">0</div>
       <button onclick="countUp()">+</button>
     </div>
+    <div class="parent">
+      <p id="child1">text</p>
+    </div>
+    <div class="box">
+      <div id="box-card"></div>
+    </div>
     <script>
       //   let age = Number(prompt("please enter your age:"));
       //   if (age < 0 || age > 100) console.log("please enter true number.");
@@ -138,19 +144,66 @@
         modal.style.display = "none";
       }
       //   -------------------------------------------------12
-      function countUp() {
-        let count = parseInt(document.getElementById("count-num").innerHTML);
+      // function countUp() {
+      //   let count = parseInt(document.getElementById("count-num").innerHTML);
+      //   count++;
+      //   document.getElementById("count-num").innerHTML = count;
+      // }
+      // function countDown() {
+      //   let count = parseInt(document.getElementById("count-num").innerHTML);
+      //   count--;
+      //   document.getElementById("count-num").innerHTML = count;
+      // }
+      let count = parseInt(document.getElementById("count-num").innerHTML);
+      const countUp = () => {
         count++;
         document.getElementById("count-num").innerHTML = count;
-      }
-      function countDown() {
-        let count = parseInt(document.getElementById("count-num").innerHTML);
+      };
+      const countDown = () => {
         count--;
         document.getElementById("count-num").innerHTML = count;
-      }
+      };
       //   -------------------------------------------------13
+      const parent = document.getElementsByClassName("parent")[0];
+      const child = document.getElementById("child1");
+      const para = document.createElement("p");
+      const text = document.createTextNode("this is a test message.");
+      para.appendChild(text);
+      parent.replaceChild(para, child);
+      const box = document.getElementsByClassName("box")[0];
+      const card = document.getElementById("box-card");
+      const boxTitle = document.createElement("h2");
+      const boxText = document.createTextNode("lover and hater");
+      boxTitle.appendChild(boxText);
+      box.replaceChild(boxTitle, card);
       //   -------------------------------------------------14
+      class Students {
+        constructor(name, lastname, age) {
+          this.name = name;
+          this.lastname = lastname;
+          this.age = age;
+        }
+        hello() {
+          console.log("wellcom");
+        }
+      }
+      let student1 = new Students("negin", "kalantari", 25);
+      console.log(student1);
+      console.log(student1.age);
       //   -------------------------------------------------15
+      class Cat {
+        constructor(name, age, weight) {
+          this.name = name;
+          this.age = age;
+          this.weight = weight;
+        }
+        up() {
+          console.log("you go up");
+        }
+      }
+      let cat1 = new Cat("lili", "1", "1.5k");
+      console.log(cat1);
+      console.log(cat1.weight);
       //   -------------------------------------------------16
       //   -------------------------------------------------17
       //   -------------------------------------------------18
