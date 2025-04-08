@@ -22,7 +22,7 @@
   <body>
     <div class="box">
       <h2>ورود به حساب کاربری</h2>
-      <form action="">
+      <form action="" id="form1">
         <div>
           <label for="name">name</label><br /><input type="text" id="name" />
           <div class="nametaxt"></div>
@@ -38,27 +38,56 @@
           <label for="age">age</label><br /><input type="text" id="age" />
           <div class="agetext"></div>
         </div>
-        <button type="submit" onclick="clickHandler()">submit</button>
+        <button type="submit" onclick="clickHandler(event)">submit</button>
       </form>
     </div>
     <script>
-      function clickHandler() {
+      function clickHandler(event) {
+        event.preventDefault();
         let nameValue = document.getElementById("name").value;
         let lastnameValue = document.getElementById("lastname").value;
         let ageValue = document.getElementById("age").value;
-        if (nameValue.lenght < 3 && nameValue.lenght > 10)
+
+        // Validate name
+        if (nameValue.length < 3 || nameValue.length > 10) {
           document.getElementsByClassName("nametaxt")[0].innerHTML =
             "لطفا بین 3 تا 10 تا حرف باشد";
-        else if (nameValue == "")
+        } else if (nameValue == "") {
           document.getElementsByClassName("nametaxt")[0].innerHTML = "خالی است";
-        else document.getElementsByClassName("nametaxt")[0].innerHTML = "";
-        if (lastnameValue.lenght < 3 && lastnameValue.lenght > 10)
-          document.getElementsByClassName("nametaxt")[0].innerHTML =
+        } else {
+          document.getElementsByClassName("nametaxt")[0].innerHTML = "";
+        }
+
+        // Validate lastname
+        if (lastnameValue.length < 3 || lastnameValue.length > 10) {
+          document.getElementsByClassName("lastnametext")[0].innerHTML =
             "لطفا بین 3 تا 10 تا حرف باشد";
-        else if (lastnameValue == "")
-          document.getElementsByClassName("nametaxt")[0].innerHTML = "خالی است";
-        else document.getElementsByClassName("nametaxt")[0].innerHTML = "";
+        } else if (lastnameValue == "") {
+          document.getElementsByClassName("lastnametext")[0].innerHTML =
+            "خالی است";
+        } else {
+          document.getElementsByClassName("lastnametext")[0].innerHTML = "";
+        }
+
+        // Validate age
+        if (ageValue == "") {
+          document.getElementsByClassName("agetext")[0].innerHTML = "خالی است";
+        } else if (isNaN(ageValue)) {
+          document.getElementsByClassName("agetext")[0].innerHTML =
+            "باید عدد باشد";
+        } else {
+          document.getElementsByClassName("agetext")[0].innerHTML = "";
+        }
+        const name = document.getElementById("name").value;
+        const lastname = document.getElementById("lastname").value;
+        const age = document.getElementById("age").value;
+        localStorage.setItem("username", name);
+        localStorage.setItem("userLastName", lastname);
+        localStorage.setItem("age", age);
       }
+      document
+        .getElementById("form1")
+        .addEventListener("submit", clickHandler());
     </script>
   </body>
 </html>
