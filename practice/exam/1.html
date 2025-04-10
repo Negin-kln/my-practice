@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .body {
+        background-color: cornsilk;
+      }
+      .body-change {
+        background-color: chocolate;
+      }
+      .click {
+        background-color: rgb(224, 200, 247);
+        border: 1px solid rgb(44, 13, 72);
+        color: rgb(44, 13, 72);
+        padding: 2px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body class="body" id="body">
+    <button onclick="clickHandler()" class="click">change background</button>
+    <script>
+      function clickHandler() {
+        let body = document.getElementById("body");
+        body.classList.toggle("body-change");
+      }
+    </script>
+  </body>
+</html>

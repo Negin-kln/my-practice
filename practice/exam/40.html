@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دکمه رفتن به بالا</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 2000px; /* برای داشتن اسکرول زیاد */
+      }
+
+      #scrollToTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 18px;
+        cursor: pointer;
+        display: none; /* ابتدا دکمه پنهان است */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      #scrollToTopBtn:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="scrollToTopBtn">↑</button>
+
+    <script>
+      // گرفتن دکمه
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      // زمانی که کاربر اسکرول می‌کند
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          scrollToTopBtn.style.display = "block"; // نمایش دکمه
+        } else {
+          scrollToTopBtn.style.display = "none"; // پنهان‌سازی دکمه
+        }
+      };
+
+      // رویداد کلیک برای رفتن به بالا
+      scrollToTopBtn.onclick = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth", // پیمایش نرم
+        });
+      };
+    </script>
+  </body>
+</html>

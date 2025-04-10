@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        direction: rtl;
+      }
+      .box {
+        border: 1px solid grey;
+        display: inline-block;
+        height: 220px;
+        margin: 10px;
+      }
+      .image img {
+        width: 200px;
+      }
+      .box p {
+        color: red;
+        padding: 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="image">
+        <img
+          src="assets/image/images.jfif"
+          alt=""
+          onmouseenter="mouseEnterHandler()"
+          onmouseleave="mouseLeaveHandler()"
+        />
+      </div>
+      <div><p id="text">این یک متن تستی است.</p></div>
+    </div>
+    <script>
+      let text = document.getElementById("text");
+      function mouseEnterHandler() {
+        text.innerHTML = "موس روی تصویر قرار گرفته است";
+      }
+      function mouseLeaveHandler() {
+        text.innerHTML = "این یک متن تستی است.";
+      }
+    </script>
+  </body>
+</html>

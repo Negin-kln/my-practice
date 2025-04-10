@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تغییر هدر با اسکرول</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 200vh; /* برای ایجاد اسکرول */
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        transition: 0.5s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+
+      header.scrolled {
+        background-color: #333;
+        padding: 10px 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        transition: 0.5s;
+      }
+
+      header.scrolled .logo {
+        font-size: 20px;
+      }
+
+      .content {
+        margin-top: 100px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="mainHeader">
+      <div class="logo">لوگوی سایت</div>
+    </header>
+    <!-- <script>
+      const header = document.getElementById("mainHeader");
+      const scrollThreshold = 100; // حد اسکرول برای تغییر (پیکسل)
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > scrollThreshold) {
+          // اضافه کردن کلاس وقتی از حد معین پایینتر اسکرول کردیم
+          header.classList.add("scrolled");
+        } else {
+          // حذف کلاس وقتی به بالای صفحه برگشتیم
+          header.classList.remove("scrolled");
+        }
+      });
+    </script> -->
+    <script>
+      const header = document.getElementById("mainHeader");
+      const scrollP = 100;
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > scrollP) header.classList.add("scrolled");
+        else header.classList.remove("scrolled");
+      });
+    </script>
+  </body>
+</html>

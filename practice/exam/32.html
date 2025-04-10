@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منوی کشویی</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        direction: rtl;
+      }
+      .dropdown {
+        width: 200px;
+        margin: 20px;
+      }
+
+      .dropdown-title {
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        border: none;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .dropdown-content {
+        display: none;
+        background-color: #d4d4d4;
+        padding: 10px;
+        border: 1px solid #d4d4d4;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transition: 0.5s;
+      }
+      .dropdown-content ul {
+        list-style-type: none;
+      }
+      .dropdown-content li {
+        border-bottom: 1px solid #ffffff;
+        padding: 10px 2px;
+      }
+      .dropdown-content a {
+        text-decoration: none;
+        color: darkblue;
+      }
+      .dropdown-content a:hover {
+        color: #007bff;
+      }
+      .dropdown-content li:last-of-type {
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dropdown">
+      <div class="dropdown-title">کلیک کنید</div>
+      <div class="dropdown-content">
+        <ul>
+          <li><a href="#">خانه</a></li>
+          <li><a href="#">تماس با ما</a></li>
+          <li><a href="#">درباره ما</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const dropdownTitle = document.querySelector(".dropdown-title");
+      const dropdownContent = document.querySelector(".dropdown-content");
+
+      dropdownTitle.addEventListener("click", () => {
+        dropdownContent.style.display =
+          dropdownContent.style.display === "block" ? "none" : "block";
+      });
+    </script>
+  </body>
+</html>

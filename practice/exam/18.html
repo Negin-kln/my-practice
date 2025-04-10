@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بزرگنمایی با jQuery</title>
+    <style>
+      .image-zoom {
+        width: 350px;
+        height: 350px;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+
+      .image-zoom img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-zoom">
+      <img src="assets/image/images.jfif" />
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        $(".image-zoom img").hover(
+          function () {
+            $(this).animate(
+              {
+                width: "120%",
+                height: "120%",
+                marginLeft: "-10%",
+                marginTop: "-10%",
+              },
+              300
+            );
+          },
+          function () {
+            $(this).animate(
+              {
+                width: "100%",
+                height: "100%",
+                marginLeft: "0",
+                marginTop: "0",
+              },
+              300
+            );
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

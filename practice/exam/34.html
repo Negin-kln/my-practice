@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مرتب‌سازی لیست بر اساس الفبا</title>
+    <style>
+      body {
+        font-family: "Vazirmatn", sans-serif;
+        padding: 20px;
+      }
+      #unsortedList,
+      #sortedList {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        width: 300px;
+      }
+      button {
+        padding: 8px 15px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>لیست نام‌ها</h2>
+
+    <div>
+      <h3>لیست اصلی:</h3>
+      <ul id="unsortedList">
+        <li>زهرا</li>
+        <li>احمد</li>
+        <li>پارسا</li>
+        <li>نازنین</li>
+        <li>بابک</li>
+      </ul>
+    </div>
+
+    <button onclick="sortListAlphabetically()">مرتب‌سازی بر اساس الفبا</button>
+
+    <div>
+      <h3>لیست مرتب‌شده:</h3>
+      <ul id="sortedList"></ul>
+    </div>
+
+    <div id="showlist"></div>
+
+    <!-- <script>
+      function sortListAlphabetically() {
+        // دریافت لیست اصلی
+        const unsortedList = document.getElementById("unsortedList");
+        const items = Array.from(unsortedList.getElementsByTagName("li"));
+
+        // استخراج متن آیتم‌ها
+        const textValues = items.map((item) => item.textContent);
+
+        // مرتب‌سازی بر اساس الفبای فارسی
+        textValues.sort((a, b) => a.localeCompare(b, "fa"));
+
+        // نمایش لیست مرتب‌شده
+        const sortedList = document.getElementById("sortedList");
+        sortedList.innerHTML = ""; // پاک کردن محتوای قبلی
+
+        textValues.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          sortedList.appendChild(li);
+        });
+      }
+
+      // اجرای تابع هنگام بارگذاری صفحه
+      window.onload = sortListAlphabetically;
+    </script> -->
+
+    <script>
+      let list = ["سیب", "انگور", "موز", "پرتقال", "هلو"];
+      let listItem = list.sort();
+      let listShow = document.getElementById("showlist");
+      listShow.innerHTML = listItem;
+      console.log(list);
+    </script>
+  </body>
+</html>

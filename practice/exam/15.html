@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FadeIn/FadeOut Example</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 50px;
+      }
+      img {
+        border: 1px solid red;
+        width: 350px;
+        height: 350px;
+        display: none; /* تصویر ابتدا مخفی است */
+      }
+      .buttons {
+        display: flex;
+        gap: 15px;
+      }
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="buttons">
+      <button id="fadeInBtn">Show Image (fadeIn)</button>
+      <button id="fadeOutBtn">Hide Image (fadeOut)</button>
+    </div>
+
+    <img src="assets/image/images.jfif" alt="Sample Image" />
+
+    <script src="assets/jquery/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // fadeIn با کلیک روی دکمه
+        $("#fadeInBtn").click(function () {
+          $("img").fadeIn(1000); // 1000ms = 1s
+        });
+
+        // fadeOut با کلیک روی دکمه
+        $("#fadeOutBtn").click(function () {
+          $("img").fadeOut(1000); // 1000ms = 1s
+        });
+
+        // حالت toggle (اختیاری)
+        $("img").click(function () {
+          $(this).fadeToggle(500); // 500ms = 0.5s
+        });
+      });
+    </script>
+  </body>
+</html>
