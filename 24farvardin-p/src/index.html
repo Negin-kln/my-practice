@@ -24,6 +24,113 @@
     </style>
   </head>
   <body dir="rtl">
+    <div class="container mx-auto py-2">
+      <div class="grid grid-cols-12">
+        <div class="col-start-3 col-end-10">
+          <div class="grid grid-flow-row">
+            <div class="row-apan-1">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <img
+                    src="../assets/image/nazarat-logo.webp"
+                    alt=""
+                    class="w-[40px] rounded-full pl-2 object-cover"
+                  />
+                  <a href="#" class="text-zinc-700 text-[10px]">
+                    3 دیدگاه ثبت شده، نظر تو چیه؟
+                  </a>
+                </div>
+                <div class="text-[10px] flex items-center text-zinc-700">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="ruls"
+                    class="w-[10px] bg-zinc-100"
+                  /><label for="ruls" class="pr-2"
+                    ><span class="text-blue-700">قوانین و مقررات</span> را
+                    پذیرفتم</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="row-span-1 text-[10px] text-zinc-500 border border-zinc-400 rounded-sm"
+            >
+              <div class="border-b border-zinc-300 pt-2">
+                <div class="px-2">
+                  <a
+                    href="#"
+                    class="text-sky-700 border-b-2 border-sky-700 inline-block px-2 pb-2"
+                    >دیدگاه
+                  </a>
+                  <a
+                    href="#"
+                    class="active:text-sky-700 active:border-b-2 active:border-sky-700 inline-block px-2 pb-2"
+                    >سوال دارم
+                  </a>
+                </div>
+              </div>
+              <textarea
+                name="comment"
+                id="comment"
+                placeholder="متن را اینجا وارد کنید"
+                class="w-full text-zinc-700 placeholder:text-zinc-400 px-4 py-2 outline-none resize-none"
+              ></textarea>
+              <div
+                class="bg-zinc-50 pt-2 rounded-b-sm flex justify-between items-center"
+              >
+                <div class="px-4 text-[14px]">
+                  <button title="ایموجی">
+                    <img
+                      src="../assets/image/sentiment_satisfied_24dp_B7B7B7_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button title="اشاره به">
+                    <img
+                      src="../assets/image/alternate_email_24dp_B7B7B7_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button title="اسپویل">
+                    <img
+                      src="../assets/image/do_not_disturb_on_24dp_B7B7B7_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button title="استیکر">
+                    <img
+                      src="../assets/image/ar_stickers_24dp_B7B7B7_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button title="Undo">
+                    <img
+                      src="../assets/image/undo_24dp_B7B7B7_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button title="Redo">
+                    <img
+                      src="../assets/image/redo_24dp_B7B7B7_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+                <span class="text-zinc-800 px-2">1000</span>
+              </div>
+            </div>
+            <div>
+              <button
+                class="rounded-xl bg-zinc-800 text-zinc-100 hover:bg-zinc-700 hover:text-zinc-300 text-[11px] px-6 py-1 m-1"
+              >
+                ارسال نظر
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container mx-auto">
       <grid class="grid-flow-rows">
         <div class="row-span-1 px-8">
@@ -167,6 +274,13 @@
                         class="fa fa-ellipsis-h text-zinc-400 text-[10px]"
                         aria-hidden="true"
                       ></i>
+                      <div class="text-[12px] text-amber-300">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i
+                        ><i class="fa fa-star-o" aria-hidden="true"></i>
+                      </div>
                     </div>
                   </div>
                   <div class="border-r border-zinc-200 mx-3 py-1 px-6">
@@ -226,6 +340,13 @@
                         class="fa fa-ellipsis-h text-zinc-400 text-[10px]"
                         aria-hidden="true"
                       ></i>
+                      <div class="text-[12px] text-amber-300">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                      </div>
                     </div>
                   </div>
                   <div class="border-r border-zinc-200 mx-3 py-1 px-6">
@@ -268,6 +389,13 @@
                         class="fa fa-ellipsis-h text-zinc-400 text-[10px]"
                         aria-hidden="true"
                       ></i>
+                      <div class="text-[12px] text-amber-300">
+                        <i class="fa fa-star-o" aria-hidden="true"></i
+                        ><i class="fa fa-star-o" aria-hidden="true"></i
+                        ><i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i
+                        ><i class="fa fa-star-o" aria-hidden="true"></i>
+                      </div>
                     </div>
                   </div>
                   <div class="border-r border-zinc-200 mx-3 py-1 px-6">
