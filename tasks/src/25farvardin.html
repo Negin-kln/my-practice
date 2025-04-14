@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        font-family: Vazirmatn, sans-serif;
+      }
+    </style>
+  </head>
+  <body dir="rtl">
+    <div class="container mx-auto my-5">
+      <div class="grid grid-cols-6 md:grid-cols-12 mx-10 gap-5">
+        <div class="col-span-2 md:col-span-3">
+          <div>
+            <span class="bg-sky-600 text-sky-600 text-[10px]">.</span>
+            <span class="text-[13px] font-bold text-zinc-800 pr-2"
+              >مرور مطالب</span
+            >
+          </div>
+          <div class="pt-2">
+            <p class="text-zinc-800 text-[10px] font-bold mt-1.5">
+              مطالب را فیلتر کنید
+            </p>
+            <button
+              class="bg-zinc-100 rounded-full text-[11px] px-3 py-1 mt-1.5"
+            >
+              <i class="fa fa-trash text-sky-600" aria-hidden="true"></i>
+              <span class="text-zinc-500 text-[10px]">حذف همه</span>
+            </button>
+            <button
+              class="flex items-center text-zinc-500 bg-zinc-100 rounded-full text-[12px] px-3 py-1 mt-1.5"
+            >
+              <span class="text-[10px] pl-2">دسته:اخبار گردشگری و میراث</span>
+              <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="sticky top-0">
+            <div class="pt-4">
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="radio"
+                    name="filter"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none rounded-full bg-white border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="ck-1"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2.5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="ck-1" class="text-zinc-700 text-[10px] px-1.5"
+                  >همه</label
+                >
+              </div>
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="radio"
+                    name="filter"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none rounded-full bg-white border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="ck-2"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2.5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="ck-2" class="text-zinc-700 text-[10px] px-1.5"
+                  >۲۴ ساعت اخیر</label
+                >
+              </div>
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="radio"
+                    name="filter"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none rounded-full bg-white border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="ck-3"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2.5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="ck-3" class="text-zinc-700 text-[10px] px-1.5"
+                  >هفته گذشته</label
+                >
+              </div>
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="radio"
+                    name="filter"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none rounded-full bg-white border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="ck-4"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2.5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="ck-4" class="text-zinc-700 text-[10px] px-1.5"
+                  >ماه گذشته
+                </label>
+              </div>
+            </div>
+            <div class="py-4">
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="radio"
+                    name="filter-time"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none rounded-full bg-white border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="ck-5"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2.5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="ck-5" class="text-zinc-700 text-[10px] px-1.5"
+                  >کمتر از ۵ دقیقه</label
+                >
+              </div>
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="radio"
+                    name="filter-time"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none rounded-full bg-white border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="ck-6"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2.5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="ck-6" class="text-zinc-700 text-[10px] px-1.5"
+                  >کمتر از ۳۰ دقیقه</label
+                >
+              </div>
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="radio"
+                    name="filter-time"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none rounded-full bg-white border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="ck-7"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2.5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="ck-7" class="text-zinc-700 text-[10px] px-1.5"
+                  >بیشتر از ۳۰ دقیقه</label
+                >
+              </div>
+            </div>
+            <div class="relative text-[10px]">
+              <input
+                type="search"
+                name="search"
+                id="search"
+                class="border border-zinc-400 rounded-full w-full h-[22px] pr-[24px]"
+                placeholder="جستجو در دسته"
+              />
+              <i
+                class="fa fa-search text-white bg-black rounded-full p-1 absolute right-1 bottom-0.5"
+                aria-hidden="true"
+              ></i>
+            </div>
+            <div class="pt-2">
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="checkbox"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none bg-zinc-50 border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="jazebe"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="jazebe" class="text-zinc-700 text-[10px] px-1.5"
+                  >جاذبه</label
+                >
+              </div>
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="checkbox"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none bg-zinc-50 border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="gonagon"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="gonagon" class="text-zinc-700 text-[10px] px-1.5"
+                  >گوناگون</label
+                >
+              </div>
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="checkbox"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none bg-zinc-50 border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="ghaza"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="ghaza" class="text-zinc-700 text-[10px] px-1.5"
+                  >غذا</label
+                >
+              </div>
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="checkbox"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none bg-zinc-50 border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="gardesh"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="gardesh" class="text-zinc-700 text-[10px] px-1.5"
+                  >گردش</label
+                >
+              </div>
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="checkbox"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none bg-zinc-50 border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="jahangardi"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="jahangardi" class="text-zinc-700 text-[10px] px-1.5"
+                  >جهانگردی</label
+                >
+              </div>
+              <a href="#" class="text-[9px] text-zinc-500">
+                <i class="fa fa-angle-down pl-1" aria-hidden="true"></i>
+                <span>995 دسته دیگر</span>
+              </a>
+            </div>
+            <div class="relative text-[10px]">
+              <input
+                type="search"
+                name="search"
+                id="search"
+                class="border border-zinc-400 rounded-full w-full h-[22px] pr-[24px]"
+                placeholder="جستجو در نویسنده"
+              />
+              <i
+                class="fa fa-search text-white bg-black rounded-full p-1 absolute right-1 bottom-0.5"
+                aria-hidden="true"
+              ></i>
+            </div>
+            <div class="pt-2">
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="checkbox"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none bg-zinc-50 border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="hekmat"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="hekmat" class="text-zinc-700 text-[10px] px-1.5"
+                  >فاطمه حکمت شعار</label
+                >
+              </div>
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="checkbox"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none bg-zinc-50 border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="negin"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="negin" class="text-zinc-700 text-[10px] px-1.5"
+                  >نگین توکلی</label
+                >
+              </div>
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="checkbox"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none bg-zinc-50 border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="sami"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="sami" class="text-zinc-700 text-[10px] px-1.5"
+                  >مائده سمیع زاده</label
+                >
+              </div>
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="checkbox"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none bg-zinc-50 border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="team"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="team" class="text-zinc-700 text-[10px] px-1.5"
+                  >تیم کجارو</label
+                >
+              </div>
+              <div class="flex items-center">
+                <label class="flex items-center cursor-pointer relative">
+                  <input
+                    defaultChecked
+                    type="checkbox"
+                    class="peer h-3 w-3 cursor-pointer transition-all appearance-none bg-zinc-50 border border-zinc-300 checked:bg-sky-600 checked:border-sky-600"
+                    id="davar"
+                  />
+                  <span
+                    class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-2 w-2"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                </label>
+                <label for="davar" class="text-zinc-700 text-[10px] px-1.5"
+                  >رضا داور</label
+                >
+              </div>
+              <a href="#" class="text-[9px] text-zinc-500">
+                <i class="fa fa-angle-down pl-1" aria-hidden="true"></i>
+                <span>241 دسته دیگر</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-4 md:col-span-9">
+          <div class="grid grid-flow-row">
+            <div class="row-span-1 text-zinc-400 text-[10px] pb-3">
+              <div class="flex justify-between border-b border-zinc-200">
+                <div>
+                  <i class="fa fa-sort-amount-desc" aria-hidden="true"></i>
+                  <span>جدیدترین</span>
+                </div>
+                <span>184 مطلب</span>
+              </div>
+            </div>
+            <div class="row-span-1">
+              <a href="#">
+                <div class="w-[250px] sm:w-full sm:flex p-1 mx-auto">
+                  <img
+                    src="../assets/image/mt1.webp"
+                    class="w-full sm:w-[150px] object-cover rounded-sm"
+                    alt=""
+                  />
+                  <div class="p-2">
+                    <h2
+                      class="text-[12px] font-bold text-zinc-800 hover:text-sky-700"
+                    >
+                      سیزده بدر در تهران کجا بریم؟
+                    </h2>
+                    <p class="text-[10px] text-zinc-500 line-clamp-2">
+                      سیزده بدر از باستانی‌ترین جشن‌های ایرانیان است که در
+                      پاسداشت طبیعت در آخرین روز نوروز برگزار می‌شود. در تهران
+                      سیزده به در حال و هوای خاصی دارد.
+                    </p>
+                    <div
+                      class="flex text-gray-500 text-[10px] items-center pt-4"
+                    >
+                      <div class="pl-2">
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <span>0</span>
+                      </div>
+                      <div class="pl-2">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <span>10 روز پیش</span>
+                      </div>
+                      <i class="fa fa-ellipsis-h pt-2" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="w-[250px] sm:w-full sm:flex p-1 mx-auto">
+                  <img
+                    src="../assets/image/mt2.webp"
+                    class="w-full sm:w-[150px] object-cover rounded-sm"
+                    alt=""
+                  />
+                  <div class="p-2">
+                    <h2
+                      class="text-[12px] font-bold text-zinc-800 hover:text-sky-700"
+                    >
+                      تهرانگردی در نوروز: مکان‌های خلوت و جذاب برای بازدید در
+                      تعطیلات
+                    </h2>
+                    <p class="text-[10px] text-zinc-500 line-clamp-2">
+                      تعطیلات نوروز فرصتی مناسب برای گشت‌وگذار در گوشه و کنار
+                      پایتخت و بازدید از جاذبه‌های تاریخی، طبیعی و فرهنگی تهران،
+                      به دور از شلوغی‌های همیشگی است.
+                    </p>
+                    <div
+                      class="flex text-gray-500 text-[10px] items-center pt-4"
+                    >
+                      <div class="pl-2">
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <span>8</span>
+                      </div>
+                      <div class="pl-2">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <span>22 روز پیش</span>
+                      </div>
+                      <i class="fa fa-ellipsis-h pt-2" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="w-[250px] sm:w-full sm:flex p-1 mx-auto">
+                  <img
+                    src="../assets/image/mt3.webp"
+                    class="w-full sm:w-[150px] object-cover rounded-sm"
+                    alt=""
+                  />
+                  <div class="p-2">
+                    <h2
+                      class="text-[12px] font-bold text-zinc-800 hover:text-sky-700"
+                    >
+                      در اصفهان کجا غذا بخوریم؟ راهنمای کشف بهترین رستوران‌ها و
+                      غذاهای محلی
+                    </h2>
+                    <p class="text-[10px] text-zinc-500 line-clamp-2">
+                      بهترین رستوران‌ های اصفهان با منویی از غذاهای اصیل ایرانی
+                      و برنامه‌های متنوع، از گردشگران نصف جهان پذیرایی می‌کنند.
+                    </p>
+                    <div
+                      class="flex text-gray-500 text-[10px] items-center pt-4"
+                    >
+                      <div class="pl-2">
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <span>8</span>
+                      </div>
+                      <div class="pl-2">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <span>22 روز پیش</span>
+                      </div>
+                      <i class="fa fa-ellipsis-h pt-2" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="w-[250px] sm:w-full sm:flex p-1 mx-auto">
+                  <img
+                    src="../assets/image/mt4.webp"
+                    class="w-full sm:w-[150px] object-cover rounded-sm"
+                    alt=""
+                  />
+                  <div class="p-2">
+                    <h2
+                      class="text-[12px] font-bold text-zinc-800 hover:text-sky-700"
+                    >
+                      راهنمای جامع مترو تهران ۱۴۰۳: نقشه، خطوط و ایستگاه‌ها
+                    </h2>
+                    <p class="text-[10px] text-zinc-500 line-clamp-2">
+                      مترو بهترین گزینه تردد در شهر تهران، برای رهایی از ترافیک
+                      شهری است و امکان برنامه‌ریزی دقیق زمانی در جابه‌جایی‌های
+                      روزانه‌تان را میسر می‌کند.
+                    </p>
+                    <div
+                      class="flex text-gray-500 text-[10px] items-center pt-4"
+                    >
+                      <div class="pl-2">
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <span>7</span>
+                      </div>
+                      <div class="pl-2">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <span>یک ماه پیش</span>
+                      </div>
+                      <i class="fa fa-ellipsis-h pt-2" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="w-[250px] sm:w-full sm:flex p-1 mx-auto">
+                  <img
+                    src="../assets/image/mt4.webp"
+                    class="w-full sm:w-[150px] object-cover rounded-sm"
+                    alt=""
+                  />
+                  <div class="p-2">
+                    <h2
+                      class="text-[12px] font-bold text-zinc-800 hover:text-sky-700"
+                    >
+                      راهنمای جامع مترو تهران ۱۴۰۳: نقشه، خطوط و ایستگاه‌ها
+                    </h2>
+                    <p class="text-[10px] text-zinc-500 line-clamp-2">
+                      مترو بهترین گزینه تردد در شهر تهران، برای رهایی از ترافیک
+                      شهری است و امکان برنامه‌ریزی دقیق زمانی در جابه‌جایی‌های
+                      روزانه‌تان را میسر می‌کند.
+                    </p>
+                    <div
+                      class="flex text-gray-500 text-[10px] items-center pt-4"
+                    >
+                      <div class="pl-2">
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <span>7</span>
+                      </div>
+                      <div class="pl-2">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <span>یک ماه پیش</span>
+                      </div>
+                      <i class="fa fa-ellipsis-h pt-2" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="w-[250px] sm:w-full sm:flex p-1 mx-auto">
+                  <img
+                    src="../assets/image/mt4.webp"
+                    class="w-full sm:w-[150px] object-cover rounded-sm"
+                    alt=""
+                  />
+                  <div class="p-2">
+                    <h2
+                      class="text-[12px] font-bold text-zinc-800 hover:text-sky-700"
+                    >
+                      راهنمای جامع مترو تهران ۱۴۰۳: نقشه، خطوط و ایستگاه‌ها
+                    </h2>
+                    <p class="text-[10px] text-zinc-500 line-clamp-2">
+                      مترو بهترین گزینه تردد در شهر تهران، برای رهایی از ترافیک
+                      شهری است و امکان برنامه‌ریزی دقیق زمانی در جابه‌جایی‌های
+                      روزانه‌تان را میسر می‌کند.
+                    </p>
+                    <div
+                      class="flex text-gray-500 text-[10px] items-center pt-4"
+                    >
+                      <div class="pl-2">
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <span>7</span>
+                      </div>
+                      <div class="pl-2">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <span>یک ماه پیش</span>
+                      </div>
+                      <i class="fa fa-ellipsis-h pt-2" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="row-span-1 flex items-center text-[10px] text-zinc-600 py-5"
+            >
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+              <div>
+                <button
+                  class="bg-zinc-800 text-white rounded-full w-[20px] pt-1 mr-3"
+                >
+                  1
+                </button>
+                <button class="text-zinc-600 rounded-full w-[20px] pt-1 mr-1">
+                  2
+                </button>
+                <button class="text-zinc-600 rounded-full w-[20px] pt-1 mr-1">
+                  3
+                </button>
+                <button class="text-zinc-600 rounded-full w-[20px] pt-1 mr-1">
+                  4
+                </button>
+                <button class="text-zinc-600 rounded-full w-[20px] pt-1 mr-1">
+                  5
+                </button>
+                <button class="text-zinc-600 rounded-full w-[20px] pt-1 mr-1">
+                  ...
+                </button>
+                <button
+                  class="text-zinc-600 rounded-full w-[20px] pt-1 mr-1 ml-2"
+                >
+                  10
+                </button>
+              </div>
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
