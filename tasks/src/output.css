@@ -840,6 +840,9 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
+  .text-\[5px\] {
+    font-size: 5px;
+  }
   .text-\[8px\] {
     font-size: 8px;
   }
@@ -868,6 +871,9 @@
   .font-light {
     --tw-font-weight: var(--font-weight-light);
     font-weight: var(--font-weight-light);
+  }
+  .text-\[px\] {
+    color: px;
   }
   .text-amber-300 {
     color: var(--color-amber-300);
@@ -1134,6 +1140,11 @@
   .sm\:grid-cols-6 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
+  .sm\:text-\[10px\] {
+    @media (width >= 40rem) {
+      font-size: 10px;
     }
   }
   .sm\:shadow-none {
