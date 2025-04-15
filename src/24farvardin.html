@@ -118,78 +118,83 @@
             <!-- فرم نظرات -->
             <div class="row-span-1 px-10 py-2">
               <form>
-                <div
-                  class="bg-sky-800 rounded-t-md text-white flex flex-wrap justify-between text-[12px] text-start px-4 py-1"
-                >
-                  <span>دیدگاهتان را با ما به اشتراک بگذارید</span>
-                  <div class="flex">
-                    <span>امتیاز:</span>
-                    <div class="flex items-center px-1">
-                      <ion-icon name="star-outline"></ion-icon
-                      ><ion-icon name="star-outline"></ion-icon
-                      ><ion-icon name="star-outline"></ion-icon
-                      ><ion-icon name="star-outline"></ion-icon
-                      ><ion-icon name="star-outline"></ion-icon>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="grid grid-flow-row border border-gray-200 rounded-b-md p-4"
-                >
-                  <div class="row-span-1">
-                    <div class="grid grid-cols-2 gap-2">
-                      <div class="col-span-1 text-justify">
-                        <label for="name" class="relative text-[14px]"
-                          ><ion-icon
-                            name="person"
-                            class="absolute top-1"
-                          ></ion-icon
-                          ><span class="pr-5">نام کاربری:</span>
-                          <span class="text-red-600">*</span></label
-                        ><br />
-                        <input
-                          type="text"
-                          id="name"
-                          class="border border-sky-800 hover:border-gray-400 px-2 py-1 text-[14px] text-gray-500 outline-none focus:border-sky-800 rounded-md w-full"
-                        />
-                      </div>
-                      <div class="col-span-1 text-justify">
-                        <label for="password" class="relative text-[14px]"
-                          ><ion-icon
-                            name="key"
-                            class="absolute top-1.5"
-                          ></ion-icon
-                          ><span class="pr-5">رمز ورود:</span>
-                          <span class="text-red-600">*</span></label
-                        ><br />
-                        <input
-                          type="text"
-                          id="password"
-                          class="border border-sky-800 hover:border-gray-400 px-2 py-1 text-[14px] text-gray-500 outline-none focus:border-sky-800 rounded-md w-full"
-                        />
+                <div class="xl:w-[600px] xl:mx-auto">
+                  <div
+                    class="bg-sky-800 rounded-t-md text-white flex flex-wrap justify-between text-[12px] text-start px-4 py-1"
+                  >
+                    <span>دیدگاهتان را با ما به اشتراک بگذارید</span>
+                    <div class="flex">
+                      <span>امتیاز:</span>
+                      <div class="flex items-center px-1">
+                        <ion-icon name="star-outline"></ion-icon
+                        ><ion-icon name="star-outline"></ion-icon
+                        ><ion-icon name="star-outline"></ion-icon
+                        ><ion-icon name="star-outline"></ion-icon
+                        ><ion-icon name="star-outline"></ion-icon>
                       </div>
                     </div>
                   </div>
-                  <div class="row-span-1 text-start mt-2">
-                    <label for="comment" class="text-[14px] relative"
-                      ><ion-icon
-                        name="create"
-                        class="absolute top-1"
-                      ></ion-icon>
-                      <span class="pr-5">دیدگاه خود را وارد کنید:</span></label
-                    >
-                    <textarea
-                      name="comment"
-                      id="comment"
-                      class="border border-sky-800 hover:border-gray-400 px-2 py-1 text-[14px] text-gray-500 outline-none focus:border-sky-800 rounded-md w-full resize-none h-[120px]"
-                    ></textarea>
-                  </div>
-                  <div class="row-span-1 text-start pt-2">
-                    <button
-                      class="text-[14px] bg-sky-800 text-white py-1 hover:bg-sky-700 rounded-full w-full"
-                    >
-                      درج نظر
-                    </button>
+                  <div
+                    class="grid grid-flow-row border border-gray-200 rounded-b-md p-4"
+                  >
+                    <div class="row-span-1">
+                      <div class="grid grid-cols-2 gap-2">
+                        <div class="col-span-1 text-justify">
+                          <label for="name" class="relative text-[14px]"
+                            ><ion-icon
+                              name="person"
+                              class="absolute top-1"
+                            ></ion-icon
+                            ><span class="pr-5">نام کاربری:</span>
+                            <span class="text-red-600">*</span></label
+                          ><br />
+                          <input
+                            type="text"
+                            id="name"
+                            class="border border-sky-800 hover:border-gray-400 px-2 py-1 text-[14px] text-gray-500 outline-none focus:border-sky-800 rounded-md w-full"
+                          />
+                        </div>
+                        <div class="col-span-1 text-justify">
+                          <label for="password" class="relative text-[14px]"
+                            ><ion-icon
+                              name="key"
+                              class="absolute top-1.5"
+                            ></ion-icon
+                            ><span class="pr-5">رمز ورود:</span>
+                            <span class="text-red-600">*</span></label
+                          ><br />
+                          <input
+                            type="text"
+                            id="password"
+                            class="border border-sky-800 hover:border-gray-400 px-2 py-1 text-[14px] text-gray-500 outline-none focus:border-sky-800 rounded-md w-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row-span-1 text-start mt-2">
+                      <label for="comment" class="text-[14px] relative"
+                        ><ion-icon
+                          name="create"
+                          class="absolute top-1"
+                        ></ion-icon>
+                        <span class="pr-5"
+                          >دیدگاه خود را وارد کنید:</span
+                        ></label
+                      >
+                      <textarea
+                        name="comment"
+                        id="comment"
+                        placeholder="نظر شما ..."
+                        class="border border-sky-800 hover:border-gray-400 px-2 py-1 text-[14px] placeholder:text-[12px] text-gray-500 outline-none focus:border-sky-800 rounded-md w-full resize-none h-[120px]"
+                      ></textarea>
+                    </div>
+                    <div class="row-span-1 text-start pt-2">
+                      <button
+                        class="text-[14px] bg-sky-800 text-white py-1 hover:bg-sky-700 rounded-full w-full"
+                      >
+                        درج نظر
+                      </button>
+                    </div>
                   </div>
                 </div>
               </form>
