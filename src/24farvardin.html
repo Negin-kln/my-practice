@@ -119,21 +119,57 @@
                       ورود / ثبت‌نام
                     </a>
                   </div>
-                  <div class="grid grid-flow-row">
-                    <div class="row-apan-1">
-                      <div class="flex items-center justify-between">
-                        <div class="flex items-center py-2">
-                          <img
-                            src="../assets/image/nazarat-logo.webp"
-                            alt=""
-                            class="w-[40px] rounded-full pl-2 object-cover"
-                          />
-                          <a href="#" class="text-zinc-700 text-[10px]">
-                            3 دیدگاه ثبت شده، نظر تو چیه؟
+                  <div
+                    class="grid grid-flow-row text-[10px] text-zinc-500 border-zinc-400"
+                  >
+                    <div class="row-span-1 border-b border-zinc-300 pt-2 mb-4">
+                      <div class="flex justify-between items-center px-2">
+                        <div>
+                          <a
+                            href="#"
+                            class="text-sky-700 border-b-2 border-sky-700 inline-block px-2 pb-2"
+                            >دیدگاه
+                          </a>
+                          <a
+                            href="#"
+                            class="active:text-sky-700 active:border-b-2 active:border-sky-700 inline-block px-2 pb-2"
+                            >سوال دارم
                           </a>
                         </div>
+                        <div>
+                          <span>امتیاز:</span>
+                          <i class="fa fa-star-o" aria-hidden="true"></i>
+                          <i class="fa fa-star-o" aria-hidden="true"></i>
+                          <i class="fa fa-star-o" aria-hidden="true"></i>
+                          <i class="fa fa-star-o" aria-hidden="true"></i>
+                          <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row-span-1">
+                      <div class="flex justify-center">
+                        <input
+                          type="text"
+                          placeholder="نام"
+                          class="border border-zinc-300 rounded-md px-2 py-1 outline-none placeholder:text-zinc-400 w-1/2 my-2 ml-1"
+                        />
+                        <input
+                          type="text"
+                          placeholder="شماره تماس"
+                          class="border border-zinc-300 rounded-md px-2 py-1 outline-none placeholder:text-zinc-400 w-1/2 my-2"
+                        />
+                      </div>
+                      <textarea
+                        name="comment"
+                        id="comment"
+                        placeholder="متن را اینجا وارد کنید"
+                        class="w-full border border-zinc-300 rounded-md text-zinc-700 placeholder:text-zinc-400 px-4 py-2 outline-none resize-none"
+                      ></textarea>
+                    </div>
+                    <div class="row-span-1">
+                      <div class="flex justify-between">
                         <div
-                          class="text-[10px] flex items-center text-zinc-700"
+                          class="text-[10px] flex items-center text-zinc-700 py-1"
                         >
                           <input
                             type="checkbox"
@@ -145,105 +181,12 @@
                             را پذیرفتم</label
                           >
                         </div>
+                        <button
+                          class="rounded-xl bg-sky-700 text-white hover:bg-sky-600 text-[11px] px-6 py-1 m-1"
+                        >
+                          ارسال نظر
+                        </button>
                       </div>
-                    </div>
-                    <div
-                      class="row-span-1 text-[10px] text-zinc-500 border border-zinc-400 rounded-sm"
-                    >
-                      <div
-                        class="sm:flex justify-around p-2 border-b border-zinc-300"
-                      >
-                        <input
-                          type="text"
-                          placeholder="نام"
-                          class="border border-zinc-300 rounded-md px-2 py-1 outline-none placeholder:text-zinc-400 min-w-[250px] m-1"
-                        />
-                        <input
-                          type="text"
-                          placeholder="شماره تماس"
-                          class="border border-zinc-300 rounded-md px-2 py-1 outline-none placeholder:text-zinc-400 min-w-[250px] m-1"
-                        />
-                      </div>
-                      <div class="border-b border-zinc-300 pt-2">
-                        <div class="flex justify-between items-center px-2">
-                          <div>
-                            <a
-                              href="#"
-                              class="text-sky-700 border-b-2 border-sky-700 inline-block px-2 pb-2"
-                              >دیدگاه
-                            </a>
-                            <a
-                              href="#"
-                              class="active:text-sky-700 active:border-b-2 active:border-sky-700 inline-block px-2 pb-2"
-                              >سوال دارم
-                            </a>
-                          </div>
-                          <div>
-                            <span>امتیاز:</span>
-                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                          </div>
-                        </div>
-                      </div>
-                      <textarea
-                        name="comment"
-                        id="comment"
-                        placeholder="متن را اینجا وارد کنید"
-                        class="w-full text-zinc-700 placeholder:text-zinc-400 px-4 py-2 outline-none resize-none"
-                      ></textarea>
-                      <div
-                        class="bg-zinc-50 pt-2 rounded-b-sm flex justify-between items-center"
-                      >
-                        <div class="px-4 text-[14px]">
-                          <button title="ایموجی">
-                            <img
-                              src="../assets/image/sentiment_satisfied_24dp_B7B7B7_FILL0_wght400_GRAD0_opsz24.svg"
-                              alt=""
-                            />
-                          </button>
-                          <button title="اشاره به">
-                            <img
-                              src="../assets/image/alternate_email_24dp_B7B7B7_FILL0_wght400_GRAD0_opsz24.svg"
-                              alt=""
-                            />
-                          </button>
-                          <button title="اسپویل">
-                            <img
-                              src="../assets/image/do_not_disturb_on_24dp_B7B7B7_FILL0_wght400_GRAD0_opsz24.svg"
-                              alt=""
-                            />
-                          </button>
-                          <button title="استیکر">
-                            <img
-                              src="../assets/image/ar_stickers_24dp_B7B7B7_FILL0_wght400_GRAD0_opsz24.svg"
-                              alt=""
-                            />
-                          </button>
-                          <button title="Undo">
-                            <img
-                              src="../assets/image/undo_24dp_B7B7B7_FILL0_wght400_GRAD0_opsz24.svg"
-                              alt=""
-                            />
-                          </button>
-                          <button title="Redo">
-                            <img
-                              src="../assets/image/redo_24dp_B7B7B7_FILL0_wght400_GRAD0_opsz24.svg"
-                              alt=""
-                            />
-                          </button>
-                        </div>
-                        <span class="text-zinc-800 px-2">1000</span>
-                      </div>
-                    </div>
-                    <div class="row-span-1 flex">
-                      <button
-                        class="rounded-xl bg-zinc-800 text-zinc-100 hover:bg-zinc-700 hover:text-zinc-300 text-[11px] px-6 py-1 m-1"
-                      >
-                        ارسال نظر
-                      </button>
                     </div>
                   </div>
                 </div>
